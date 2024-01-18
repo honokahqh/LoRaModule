@@ -68,9 +68,6 @@
 
 /* Private Cmd 后缀0xA0~0xEF*/
 
-extern uint8_t RoomCtrlTestMode;
-#define RoomCtrl_Test_CMD		0XB0	//中控测试指令
-
 #define DeviceTimeout			7200	//设备通讯超时  单位秒
 #define HeatBeat_Period			60		//子设备心跳包间隔
 #define Register_Timeout		30		//注册超时时间

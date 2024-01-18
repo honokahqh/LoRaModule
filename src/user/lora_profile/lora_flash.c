@@ -184,7 +184,7 @@ void LoRaSlaverSyn()
     {
         if (LoRaDevice.Slaver[i].shortAddress)
         {
-            LOG_I(TAG, "SynSlaver:%d, SA:%d \r\n", i, LoRaDevice.Slaver[i].shortAddress);
+            LOG_I(TAG, "SynSlaver:%d, SAddr:%d \r\n", i, LoRaDevice.Slaver[i].shortAddress);
         }
     }
 }

@@ -1,24 +1,68 @@
-# LoRa-RoomCtrl
-# æ§åˆ¶èŒƒå›´:
-# 3è·¯12~24vç›´æµè°ƒå…‰
-# 4è·¯å¯æ§ç¡…è°ƒå…‰
-# 22è·¯ç»§ç”µå™¨
-<!-- ASR6601 Loraä¸­æ§
-v1.0.0  by Honokahqh    2023.8.5
-1.modbus slaver ç”¨äºä¸­æ§å¯„å­˜å™¨æ§åˆ¶,ç›®å‰æ”¯æŒ10ä¸ªç»§ç”µå™¨+3è·¯PWMè°ƒå…‰
-2.modbus master ç”¨äºè¯»å–ä¼ æ„Ÿå™¨æ•°æ®,ç›®å‰æ”¯æŒçº¢å¤–é¥æ§ã€è“ç‰™ã€æˆ¿æ€ç¯ã€äººä½“çº¢å¤–1ã€äººä½“çº¢å¤–2ã€å¤–éƒ¨å¼€å…³
-3.OTAå‡çº§ ymodemåè®® å•åŒ…128å­—èŠ‚
-    3.1 æ”¯æŒåŠ¨æ€é€Ÿç‡ æ ¹æ®ä¿¡å·è´¨é‡åˆ‡æ¢å¸¦å®½-ä¸»æœºæä¾›
-4.flashå­˜å‚¨ æ¯é¡µ4KB,åˆè®¡ä¸‰é¡µ page1:0x0800D000,å­˜å‚¨ç½‘ç»œä¿¡æ¯ page2:0x0800E000,å­˜å‚¨ä¸­æ§mbsä¿¡æ¯ page3:0x0800F000,å­˜å‚¨OTAçŠ¶æ€
-5.è®¾å¤‡ç‰ˆæœ¬å·Dev_Version -->
+## LoRaÄ£×é-get startÀı³Ì
 
+## Àı³Ì¼ò½é
 
-<!-- v1.0.1 by Honokahqh
-æ–°å¢å¤§ä¸­æ§æ”¯æŒ
-æ–°å¢LoRa/485é€šè®¯åˆ‡æ¢ -->
+»ùÓÚ±¾Àı³Ì¿ÉÒÔÍ¨¹ıUART0·¢ËÍATÊı¾İÅäÖÃ²ÎÊı/Ä£Ê½µÈ,ÊµÏÖ¸÷¸öLoRaÉè±¸¼ä×é½¨/ÍË³öÍ¨Ñ¶ÍøÂç
+SF,BW,CR,FRQÎªLoRaÍ¨Ñ¶²ÎÊı,²»Ò»ÖÂÔòÎŞ·¨Í¨Ñ¶¡£PanID,SAddrÎªÍøÂç²ÎÊı
+Ã¿¸öÉè±¸¿ÉÒÔ°ó¶¨Ò»¸öMaster,ÔÚ°ó¶¨MasterÊ±£¬ĞèÒª½øÈë´Ó»úÄ£Ê½AT+NETOPEN2
+Ã¿¸öÉè±¸×î¶à¿ÉÒÔ°ó¶¨MAX_CHILDERN¸öSlaver£¬ÔÚ°ó¶¨slaverÊ±£¬ĞèÒª½øÈëÖ÷»úÄ£Ê½AT+NETOPEN1
+´Ó»ú±»°ó¶¨ºó»á×Ô¶¯½øÈë¹¤×÷ĞÅµÀ£¬¶øÖ÷»úĞèÒªÍ¨¹ıÃüÁîAT+NETOPEN0·µ»Ø
 
-<!-- v1.0.2 by Honokahqh 2023.12.8
-æ–°å¢è“ç‰™æ¨¡å—æ”¯æŒ
-æ–°å¢ä¸­æ§çº¢å¤–æ¨¡å—æ”¯æŒ 400msè½®è¯¢ä¸€æ¬¡çº¢å¤–é¥æ§æ•°æ® 10sè½®è¯¢ä¸€æ¬¡æ¸©åº¦æ•°æ®
-å¿ƒè·³æ–°å¢æ¥è‡ªä¸­æ§çº¢å¤–æ¨¡å—çš„æ¸©åº¦æ•°æ®
-ä¿®å¤bug--åœ¨bootçŠ¶æ€ä¸‹å¿ƒè·³ç‰ˆæœ¬å·ä¸æ­£ç¡® --># LoRaModule
+## FLASH·ÖÇø
+
+0x08000000-0x0801FFFFÎªASR6601CBµÄFlash·¶Î§£¬0x08003FFFFÎªASR6601SEµÄFlash·¶Î§£¬Ã¿4KBÎªÒ»Ò³
+¸Ã¹Ì¼şÉèÖÃ¹Ì¼ş´óĞ¡Îª(128/2 - 12) = 52KB,ÈıÒ³·Ö±ğÓÃÓÚ´æ´¢ÍøÂçĞÅÏ¢-×ÓÉè±¸ĞÅÏ¢-¹Ì¼şOTAĞÅÏ¢
+BOOT¿ÉÊÓÎªFAC¹Ì¼ş£¬²»»á±»²Á³ı
+
+### OTA
+
+Ê¹ÓÃYmodemĞ­ÒéLoRa½øĞĞ´«Êä£¬Àı³Ì½ö°üº¬OTAÉı¼¶£¬²»°üº¬ÉÏÎ»»úÈçºÎÍ¨¹ıLoRa·¢ËÍÉı¼¶°ü
+
+## ÈçºÎÊ¹ÓÃÀı³Ì
+
+Ö÷»úÁ÷³ÌÈçÏÂ£º
+
+AT+FACTORY ---> (¿ÉÑ¡£ºAT+SF/AT+BWÅäÖÃÍ¨Ñ¶²ÎÊı£¬AT+PANIDÅäÖÃÍøÂç²ÎÊı) ---> AT+NETOPEN1
+
+´Ó»úÁ÷³ÌÈçÏÂ£º
+
+AT+FACTORY ---> AT+NETOPEN2
+
+×éÍø´òÓ¡ÈçÏÂ(Ö÷»ú)
+
+·¢¡ú¡óAT+FACTORY
+W (1030410) LoRaAtCmd: Factory
+E (98) flashData: Unknow Error # ½öÉÕÂ¼ÁËFACÃ»ÓĞÉÕÂ¼APP,FLASH±¨´í
+I (98) flashData: NetState:0, NetMode:2, NetModeTimeout:0 
+I (99) flashData: channel:0, PanID:fffe SelfAddr:0000, MasterAddr:0000 
+I (99) flashData: SpreadingFactor:7, BandWidth:0 
+I (707) main: app start
+I (707) LoRa core: DAddr:fffe, CMD:01 data:7B FF FE 00 00 FF FE 00 01 08 A7 D7 1A 00 C3 02 32 01 EA 
+I (3772) LoRa core: DAddr:fffe, CMD:01 data:7B FF FE 00 00 FF FE 01 01 08 A7 D7 1A 00 C3 02 32 01 EB 
+·¢¡ú¡óAT+NETOPEN1
+I (140177) LoRaAtCmd: NetMode:1
+I (140177) flashData: NetState:0, NetMode:1, NetModeTimeout:0 
+I (140178) flashData: channel:0, PanID:0290 SelfAddr:0000, MasterAddr:0000 
+I (140179) flashData: SpreadingFactor:7, BandWidth:0 
+
+- ´ËÊ±Éè±¸ÒÑ¾­ÔËĞĞ£¬¶Ô´Ó»ú·¢ËÍAT+FACTORYÒÔ¼°AT+NETOPEN2½øÈë×éÍøÄ£Ê½
+
+I (188427) LoRa function: receive packet from PanID:FFFE, SAddr:030C, DAddr:0000, CMD:01, data:7B FF FE 03 0C 00 00 00 01 08 B7 9F 39 8C 04 BA 32 01 6C 
+I (188429) LoRaCmd_Master: New Device Register, Mac:b7:9f:39:8c:04:ba:32:01
+I (188429) LoRa core: DAddr:030c, CMD:02 data:7B 02 90 00 00 03 0C 00 02 06 05 9C 00 00 07 01 7D 
+I (188572) LoRa function: receive packet from PanID:0290, SAddr:059C, DAddr:0000, CMD:03, data:7B 02 90 05 9C 00 00 00 03 08 B7 9F 39 8C 04 BA 32 01 6B 
+I (188573) LoRa core: DAddr:059c, CMD:04 data:7B 02 90 00 00 05 9C 00 04 00 74 
+I (188628) flashData: AddSlaver:0, SAddr:1436 
+
+- ´ËÊ±Éè±¸×éÍøÍê±Ï£¬Ö÷»ú¿ÉÒÔÑ¡Ôñ¼ÌĞø°ó¶¨Éè±¸£¬Ò²¿ÉÒÔÑ¡ÔñÊ¹ÓÃÃüÁîAT+NETOPEN0»Øµ½¹¤×÷ĞÅµÀ
+
+I (261629) LoRaAtCmd: NetMode:0
+I (261629) flashData: NetState:0, NetMode:0, NetModeTimeout:0 
+I (261630) flashData: channel:0, PanID:0290 SelfAddr:0000, MasterAddr:0000 
+I (261631) flashData: SpreadingFactor:7, BandWidth:0 
+I (261631) flashData: SynSlaver:0, SA:1436 
+I (307325) LoRa function: receive packet from PanID:0290, SAddr:059C, DAddr:0000, CMD:20, data:7B 02 90 05 9C 00 00 03 20 04 7B 0C 00 FF DF 
+I (307326) LoRaCmd_Master: HeartBeat, device saddr:059c, verion:12, rssi:255
+·¢¡ú¡ó55 AA 80 05 9C 01 # 16½øÖÆ·¢ËÍ
+I (312945) LoRa core: DAddr:059c, CMD:80 data:7B 02 90 00 00 05 9C 03 80 01 01 F3 
+I (313065) LoRa function: receive packet from PanID:0290, SAddr:059C, DAddr:0000, CMD:81, data:7B 02 90 05 9C 00 00 03 81 02 FF C5 CA 

@@ -35,20 +35,7 @@
 #define UART_TX_PORT		GPIOB
 #define UART_TX_PIN 		GPIO_PIN_1
 
-#define __DEBUG
-#ifdef __DEBUG
-#define Debug_B(format, ...)  printf(format, ##__VA_ARGS__);
-#else
-#define Debug_A(format, ...)
-#define Debug_B(format, ...)
-#define Debug_C(format, ...)                            
-#endif
-
-#ifdef __DEBUG
 #define Uart_BAUD 1000000
-#else
-#define Uart_BAUD 9600
-#endif
 
 /* uart״̬ */
 #define UART_IDLE_Timeout 5
