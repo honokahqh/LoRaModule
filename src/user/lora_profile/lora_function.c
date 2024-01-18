@@ -91,7 +91,7 @@ void Lora_ReceiveData2State()
 
     LOG_I(TAG, "receive packet from PanID:%04X, SAddr:%04X, DAddr:%04X, CMD:%02X, data:",
           LoRaPacket.Rx_PanID, LoRaPacket.Rx_SAddr, LoRaPacket.Rx_DAddr, LoRaPacket.Rx_CMD);
-#if LOG_LEVEL >= LOG_I
+#if LOG_LEVEL >= LOG_INFO
     for (uint8_t i = 0; i < LoRaPacket.Rx_Len; i++)
     {
         printf("%02X ", LoRaPacket.Rx_Data[i]);

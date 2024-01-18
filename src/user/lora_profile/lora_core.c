@@ -39,7 +39,7 @@ void CusProfile_Send(uint16_t DAddr, uint8_t cmd, uint8_t *data, uint8_t len, ui
     LoRaPacket.Tx_Data[len + Data_Addr] = XOR_Calculate(LoRaPacket.Tx_Data, len + Data_Addr);
     LoRaPacket.Tx_Len = len + Data_Addr + 1;
     LOG_I(TAG, "DAddr:%04x, CMD:%02x data:", DAddr, cmd);
-#if LOG_LEVEL >= LOG_I
+#if LOG_LEVEL >= LOG_INFO
     for(uint8_t i = 0; i < LoRaPacket.Tx_Len; i++)
     {
         printf("%02X ", LoRaPacket.Tx_Data[i]);

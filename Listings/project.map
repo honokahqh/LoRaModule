@@ -2435,7 +2435,7 @@ LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm
 LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a
 LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp\libgcc.a
 
-.debug_line     0x00000000     0xb551
+.debug_line     0x00000000     0xb4be
  .debug_line    0x00000000       0x70 ./objects/startup_cm4.o
  .debug_line    0x00000070      0x22a ./objects/system_cm4.o
  .debug_line    0x0000029a     0x10a7 ./objects/printf-stdarg.o
@@ -2449,27 +2449,27 @@ LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nof
  .debug_line    0x000046c7      0x1ab ./objects/tremo_system.o
  .debug_line    0x00004872      0x60b ./objects/tremo_uart.o
  .debug_line    0x00004e7d      0x1a1 ./objects/tremo_wdg.o
- .debug_line    0x0000501e      0x5b8 ./objects/main.o
- .debug_line    0x000055d6      0x116 ./objects/tremo_it.o
- .debug_line    0x000056ec      0x3ec ./objects/lora_demo.o
- .debug_line    0x00005ad8      0x309 ./objects/app.o
- .debug_line    0x00005de1      0x51f ./objects/rtc-board.o
- .debug_line    0x00006300      0x783 ./objects/sx1262-board.o
- .debug_line    0x00006a83      0x111 ./objects/delay.o
- .debug_line    0x00006b94      0x674 ./objects/timer.o
- .debug_line    0x00007208      0xda3 ./objects/sx126x.o
- .debug_line    0x00007fab      0xd7b ./objects/radio.o
- .debug_line    0x00008d26      0x1dd ./objects/utilities.o
- .debug_line    0x00008f03      0x61a ./objects/lora_at_cmd.o
- .debug_line    0x0000951d      0x38f ./objects/lora_cmd_m.o
- .debug_line    0x000098ac      0x403 ./objects/lora_cmd_s.o
- .debug_line    0x00009caf      0x4aa ./objects/lora_core.o
- .debug_line    0x0000a159      0x805 ./objects/lora_flash.o
- .debug_line    0x0000a95e      0x3d4 ./objects/lora_function.o
- .debug_line    0x0000ad32      0x380 ./objects/lora_user.o
- .debug_line    0x0000b0b2      0x49f ./objects/ymodem.o
+ .debug_line    0x0000501e      0x5af ./objects/main.o
+ .debug_line    0x000055cd      0x116 ./objects/tremo_it.o
+ .debug_line    0x000056e3      0x3d8 ./objects/lora_demo.o
+ .debug_line    0x00005abb      0x300 ./objects/app.o
+ .debug_line    0x00005dbb      0x51f ./objects/rtc-board.o
+ .debug_line    0x000062da      0x783 ./objects/sx1262-board.o
+ .debug_line    0x00006a5d      0x111 ./objects/delay.o
+ .debug_line    0x00006b6e      0x674 ./objects/timer.o
+ .debug_line    0x000071e2      0xda3 ./objects/sx126x.o
+ .debug_line    0x00007f85      0xd7b ./objects/radio.o
+ .debug_line    0x00008d00      0x1dd ./objects/utilities.o
+ .debug_line    0x00008edd      0x606 ./objects/lora_at_cmd.o
+ .debug_line    0x000094e3      0x37b ./objects/lora_cmd_m.o
+ .debug_line    0x0000985e      0x3ef ./objects/lora_cmd_s.o
+ .debug_line    0x00009c4d      0x496 ./objects/lora_core.o
+ .debug_line    0x0000a0e3      0x7f1 ./objects/lora_flash.o
+ .debug_line    0x0000a8d4      0x3cb ./objects/lora_function.o
+ .debug_line    0x0000ac9f      0x380 ./objects/lora_user.o
+ .debug_line    0x0000b01f      0x49f ./objects/ymodem.o
 
-.debug_info     0x00000000    0x17702
+.debug_info     0x00000000    0x1756d
  .debug_info    0x00000000       0x22 ./objects/startup_cm4.o
  .debug_info    0x00000022      0x829 ./objects/system_cm4.o
  .debug_info    0x0000084b     0x196e ./objects/printf-stdarg.o
@@ -2483,27 +2483,27 @@ LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nof
  .debug_info    0x00006b34      0x4a5 ./objects/tremo_system.o
  .debug_info    0x00006fd9      0xc7c ./objects/tremo_uart.o
  .debug_info    0x00007c55      0x544 ./objects/tremo_wdg.o
- .debug_info    0x00008199     0x1970 ./objects/main.o
- .debug_info    0x00009b09      0x136 ./objects/tremo_it.o
- .debug_info    0x00009c3f      0xd3c ./objects/lora_demo.o
- .debug_info    0x0000a97b      0x5c0 ./objects/app.o
- .debug_info    0x0000af3b     0x1340 ./objects/rtc-board.o
- .debug_info    0x0000c27b     0x1171 ./objects/sx1262-board.o
- .debug_info    0x0000d3ec      0x159 ./objects/delay.o
- .debug_info    0x0000d545      0x970 ./objects/timer.o
- .debug_info    0x0000deb5     0x21ea ./objects/sx126x.o
- .debug_info    0x0001009f     0x28e0 ./objects/radio.o
- .debug_info    0x0001297f      0x2fb ./objects/utilities.o
- .debug_info    0x00012c7a      0xf35 ./objects/lora_at_cmd.o
- .debug_info    0x00013baf      0x7dd ./objects/lora_cmd_m.o
- .debug_info    0x0001438c      0x7d7 ./objects/lora_cmd_s.o
- .debug_info    0x00014b63      0x8a7 ./objects/lora_core.o
- .debug_info    0x0001540a      0x978 ./objects/lora_flash.o
- .debug_info    0x00015d82      0x665 ./objects/lora_function.o
- .debug_info    0x000163e7      0xeb8 ./objects/lora_user.o
- .debug_info    0x0001729f      0x463 ./objects/ymodem.o
+ .debug_info    0x00008199     0x1943 ./objects/main.o
+ .debug_info    0x00009adc      0x136 ./objects/tremo_it.o
+ .debug_info    0x00009c12      0xd0f ./objects/lora_demo.o
+ .debug_info    0x0000a921      0x593 ./objects/app.o
+ .debug_info    0x0000aeb4     0x1340 ./objects/rtc-board.o
+ .debug_info    0x0000c1f4     0x1171 ./objects/sx1262-board.o
+ .debug_info    0x0000d365      0x159 ./objects/delay.o
+ .debug_info    0x0000d4be      0x970 ./objects/timer.o
+ .debug_info    0x0000de2e     0x21ea ./objects/sx126x.o
+ .debug_info    0x00010018     0x28e0 ./objects/radio.o
+ .debug_info    0x000128f8      0x2fb ./objects/utilities.o
+ .debug_info    0x00012bf3      0xf08 ./objects/lora_at_cmd.o
+ .debug_info    0x00013afb      0x7b0 ./objects/lora_cmd_m.o
+ .debug_info    0x000142ab      0x7aa ./objects/lora_cmd_s.o
+ .debug_info    0x00014a55      0x87a ./objects/lora_core.o
+ .debug_info    0x000152cf      0x94b ./objects/lora_flash.o
+ .debug_info    0x00015c1a      0x638 ./objects/lora_function.o
+ .debug_info    0x00016252      0xeb8 ./objects/lora_user.o
+ .debug_info    0x0001710a      0x463 ./objects/ymodem.o
 
-.debug_abbrev   0x00000000     0x4e59
+.debug_abbrev   0x00000000     0x4e3d
  .debug_abbrev  0x00000000       0x12 ./objects/startup_cm4.o
  .debug_abbrev  0x00000012      0x1cd ./objects/system_cm4.o
  .debug_abbrev  0x000001df      0x3df ./objects/printf-stdarg.o
@@ -2520,22 +2520,22 @@ LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nof
  .debug_abbrev  0x00001bde      0x396 ./objects/main.o
  .debug_abbrev  0x00001f74       0xd4 ./objects/tremo_it.o
  .debug_abbrev  0x00002048      0x2d9 ./objects/lora_demo.o
- .debug_abbrev  0x00002321      0x20e ./objects/app.o
- .debug_abbrev  0x0000252f      0x46c ./objects/rtc-board.o
- .debug_abbrev  0x0000299b      0x3b5 ./objects/sx1262-board.o
- .debug_abbrev  0x00002d50       0xef ./objects/delay.o
- .debug_abbrev  0x00002e3f      0x453 ./objects/timer.o
- .debug_abbrev  0x00003292      0x422 ./objects/sx126x.o
- .debug_abbrev  0x000036b4      0x4c6 ./objects/radio.o
- .debug_abbrev  0x00003b7a      0x140 ./objects/utilities.o
- .debug_abbrev  0x00003cba      0x2c8 ./objects/lora_at_cmd.o
- .debug_abbrev  0x00003f82      0x1b1 ./objects/lora_cmd_m.o
- .debug_abbrev  0x00004133      0x158 ./objects/lora_cmd_s.o
- .debug_abbrev  0x0000428b      0x257 ./objects/lora_core.o
- .debug_abbrev  0x000044e2      0x2c7 ./objects/lora_flash.o
- .debug_abbrev  0x000047a9      0x207 ./objects/lora_function.o
- .debug_abbrev  0x000049b0      0x2a6 ./objects/lora_user.o
- .debug_abbrev  0x00004c56      0x203 ./objects/ymodem.o
+ .debug_abbrev  0x00002321      0x1f2 ./objects/app.o
+ .debug_abbrev  0x00002513      0x46c ./objects/rtc-board.o
+ .debug_abbrev  0x0000297f      0x3b5 ./objects/sx1262-board.o
+ .debug_abbrev  0x00002d34       0xef ./objects/delay.o
+ .debug_abbrev  0x00002e23      0x453 ./objects/timer.o
+ .debug_abbrev  0x00003276      0x422 ./objects/sx126x.o
+ .debug_abbrev  0x00003698      0x4c6 ./objects/radio.o
+ .debug_abbrev  0x00003b5e      0x140 ./objects/utilities.o
+ .debug_abbrev  0x00003c9e      0x2c8 ./objects/lora_at_cmd.o
+ .debug_abbrev  0x00003f66      0x1b1 ./objects/lora_cmd_m.o
+ .debug_abbrev  0x00004117      0x158 ./objects/lora_cmd_s.o
+ .debug_abbrev  0x0000426f      0x257 ./objects/lora_core.o
+ .debug_abbrev  0x000044c6      0x2c7 ./objects/lora_flash.o
+ .debug_abbrev  0x0000478d      0x207 ./objects/lora_function.o
+ .debug_abbrev  0x00004994      0x2a6 ./objects/lora_user.o
+ .debug_abbrev  0x00004c3a      0x203 ./objects/ymodem.o
 
 .debug_aranges  0x00000000      0xf08
  .debug_aranges
@@ -2603,69 +2603,69 @@ LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nof
  .debug_aranges
                 0x00000ed8       0x30 ./objects/ymodem.o
 
-.debug_str      0x00000000     0x5c66
- .debug_str     0x00000000       0x4b ./objects/startup_cm4.o
- .debug_str     0x0000004b      0x5af ./objects/system_cm4.o
+.debug_str      0x00000000     0x5c11
+ .debug_str     0x00000000       0x4d ./objects/startup_cm4.o
+ .debug_str     0x0000004d      0x585 ./objects/system_cm4.o
                                 0x61a (size before relaxing)
- .debug_str     0x000005fa      0x2da ./objects/printf-stdarg.o
+ .debug_str     0x000005d2      0x2da ./objects/printf-stdarg.o
                                 0x515 (size before relaxing)
- .debug_str     0x000008d4      0x5f5 ./objects/tremo_bstimer.o
+ .debug_str     0x000008ac      0x5f5 ./objects/tremo_bstimer.o
                                 0x810 (size before relaxing)
- .debug_str     0x00000ec9       0xcd ./objects/tremo_delay.o
+ .debug_str     0x00000ea1       0xcd ./objects/tremo_delay.o
                                 0x5cc (size before relaxing)
- .debug_str     0x00000f96       0xe5 ./objects/tremo_flash.o
+ .debug_str     0x00000f6e       0xe5 ./objects/tremo_flash.o
                                 0x3dc (size before relaxing)
- .debug_str     0x0000107b      0x310 ./objects/tremo_gpio.o
+ .debug_str     0x00001053      0x310 ./objects/tremo_gpio.o
                                 0x8b2 (size before relaxing)
- .debug_str     0x0000138b       0xda ./objects/tremo_pwr.o
+ .debug_str     0x00001363       0xda ./objects/tremo_pwr.o
                                 0x69b (size before relaxing)
- .debug_str     0x00001465      0xed7 ./objects/tremo_rcc.o
+ .debug_str     0x0000143d      0xed7 ./objects/tremo_rcc.o
                                0x1523 (size before relaxing)
- .debug_str     0x0000233c      0x865 ./objects/tremo_rtc.o
+ .debug_str     0x00002314      0x865 ./objects/tremo_rtc.o
                                 0xeb5 (size before relaxing)
- .debug_str     0x00002ba1       0x55 ./objects/tremo_system.o
+ .debug_str     0x00002b79       0x55 ./objects/tremo_system.o
                                 0x399 (size before relaxing)
- .debug_str     0x00002bf6      0x4c1 ./objects/tremo_uart.o
+ .debug_str     0x00002bce      0x4c1 ./objects/tremo_uart.o
                                 0xba6 (size before relaxing)
- .debug_str     0x000030b7      0x104 ./objects/tremo_wdg.o
+ .debug_str     0x0000308f      0x104 ./objects/tremo_wdg.o
                                 0x69b (size before relaxing)
- .debug_str     0x000031bb      0x2a3 ./objects/main.o
-                               0x107d (size before relaxing)
- .debug_str     0x0000345e       0xd3 ./objects/tremo_it.o
+ .debug_str     0x00003193      0x276 ./objects/main.o
+                               0x1050 (size before relaxing)
+ .debug_str     0x00003409       0xd3 ./objects/tremo_it.o
                                 0x220 (size before relaxing)
- .debug_str     0x00003531      0x213 ./objects/lora_demo.o
-                                0x70e (size before relaxing)
- .debug_str     0x00003744       0xb1 ./objects/app.o
-                                0x40d (size before relaxing)
- .debug_str     0x000037f5      0x2e0 ./objects/rtc-board.o
+ .debug_str     0x000034dc      0x213 ./objects/lora_demo.o
+                                0x6e1 (size before relaxing)
+ .debug_str     0x000036ef       0xb1 ./objects/app.o
+                                0x3e0 (size before relaxing)
+ .debug_str     0x000037a0      0x2e0 ./objects/rtc-board.o
                                 0xf6d (size before relaxing)
- .debug_str     0x00003ad5      0x5f3 ./objects/sx1262-board.o
+ .debug_str     0x00003a80      0x5f3 ./objects/sx1262-board.o
                                 0xc9e (size before relaxing)
- .debug_str     0x000040c8       0x17 ./objects/delay.o
+ .debug_str     0x00004073       0x17 ./objects/delay.o
                                 0x211 (size before relaxing)
- .debug_str     0x000040df      0x249 ./objects/timer.o
+ .debug_str     0x0000408a      0x249 ./objects/timer.o
                                 0x584 (size before relaxing)
- .debug_str     0x00004328      0xed3 ./objects/sx126x.o
+ .debug_str     0x000042d3      0xed3 ./objects/sx126x.o
                                0x1747 (size before relaxing)
- .debug_str     0x000051fb      0x4b7 ./objects/radio.o
+ .debug_str     0x000051a6      0x4b7 ./objects/radio.o
                                0x15db (size before relaxing)
- .debug_str     0x000056b2       0x47 ./objects/utilities.o
+ .debug_str     0x0000565d       0x47 ./objects/utilities.o
                                 0x2ac (size before relaxing)
- .debug_str     0x000056f9      0x1cf ./objects/lora_at_cmd.o
-                                0x5b2 (size before relaxing)
- .debug_str     0x000058c8       0xbe ./objects/lora_cmd_m.o
-                                0x539 (size before relaxing)
- .debug_str     0x00005986       0x88 ./objects/lora_cmd_s.o
-                                0x51e (size before relaxing)
- .debug_str     0x00005a0e       0xa3 ./objects/lora_core.o
-                                0x601 (size before relaxing)
- .debug_str     0x00005ab1       0x8d ./objects/lora_flash.o
-                                0x4aa (size before relaxing)
- .debug_str     0x00005b3e       0x47 ./objects/lora_function.o
-                                0x4b5 (size before relaxing)
- .debug_str     0x00005b85       0x57 ./objects/lora_user.o
+ .debug_str     0x000056a4      0x1cf ./objects/lora_at_cmd.o
+                                0x585 (size before relaxing)
+ .debug_str     0x00005873       0xbe ./objects/lora_cmd_m.o
+                                0x50c (size before relaxing)
+ .debug_str     0x00005931       0x88 ./objects/lora_cmd_s.o
+                                0x4f1 (size before relaxing)
+ .debug_str     0x000059b9       0xa3 ./objects/lora_core.o
+                                0x5d4 (size before relaxing)
+ .debug_str     0x00005a5c       0x8d ./objects/lora_flash.o
+                                0x47d (size before relaxing)
+ .debug_str     0x00005ae9       0x47 ./objects/lora_function.o
+                                0x488 (size before relaxing)
+ .debug_str     0x00005b30       0x57 ./objects/lora_user.o
                                 0xaaa (size before relaxing)
- .debug_str     0x00005bdc       0x8a ./objects/ymodem.o
+ .debug_str     0x00005b87       0x8a ./objects/ymodem.o
                                 0x354 (size before relaxing)
 
 .debug_ranges   0x00000000     0x1518

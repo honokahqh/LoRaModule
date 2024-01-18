@@ -5,14 +5,20 @@
 
 #include "APP.h"
 
-typedef enum {
-    LOG_NONE = 0,       /*!< No log output */
-    LOG_ERROR,      /*!< Critical errors, software module can not recover on its own */
-    LOG_WARN,       /*!< Error conditions from which recovery measures have been taken */
-    LOG_INFO,       /*!< Information messages which describe normal flow of events */
-    LOG_ALL,      /*!< Extra information which is not necessary for normal use (values, pointers, sizes, etc). */
-} log_level_t;
+// 预处理指令不能直接使用枚举成员
+//  typedef enum {
+//      LOG_NONE = 0,       /*!< No log output */
+//      LOG_ERROR,      /*!< Critical errors, software module can not recover on its own */
+//      LOG_WARN,       /*!< Error conditions from which recovery measures have been taken */
+//      LOG_INFO,       /*!< Information messages which describe normal flow of events */
+//      LOG_ALL,      /*!< Extra information which is not necessary for normal use (values, pointers, sizes, etc). */
+//  } log_level_t;
 
+#define LOG_NONE 0
+#define LOG_ERROR 1
+#define LOG_WARN 2
+#define LOG_INFO 3
+#define LOG_ALL 4 
 #define LOG_LEVEL LOG_ALL
 
 #define log_printf(level, tag, fmt, ...) do { \
