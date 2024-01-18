@@ -2111,7 +2111,7 @@ LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nof
 .iplt           0x080067ac        0x0
  .iplt          0x080067ac        0x0 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.rodata         0x080067b0      0xaa0
+.rodata         0x080067b0      0xaa8
                 0x080067b0                . = ALIGN (0x4)
  *(.rodata)
  .rodata        0x080067b0       0x50 ./objects/printf-stdarg.o
@@ -2147,57 +2147,57 @@ LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nof
                 0x08006f49       0x37 ./objects/lora_core.o
                                  0x3c (size before relaxing)
  .rodata.str1.1
-                0x08006f80      0x155 ./objects/lora_flash.o
-                                0x189 (size before relaxing)
+                0x08006f80      0x158 ./objects/lora_flash.o
+                                0x18c (size before relaxing)
  .rodata.str1.1
-                0x080070d5       0x62 ./objects/lora_function.o
+                0x080070d8       0x62 ./objects/lora_function.o
                                  0x6d (size before relaxing)
- *fill*         0x08007137        0x1 
+ *fill*         0x0800713a        0x2 
  .rodata._global_impure_ptr
-                0x08007138        0x4 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(lib_a-impure.o)
-                0x08007138                _global_impure_ptr
+                0x0800713c        0x4 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(lib_a-impure.o)
+                0x0800713c                _global_impure_ptr
  .rodata._ctype_
-                0x0800713c      0x101 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(lib_a-ctype_.o)
-                0x0800713c                _ctype_
- *fill*         0x0800723d        0x3 
- .rodata.TWO52  0x08007240       0x10 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_rint.o)
-                0x08007250                . = ALIGN (0x4)
+                0x08007140      0x101 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(lib_a-ctype_.o)
+                0x08007140                _ctype_
+ *fill*         0x08007241        0x7 
+ .rodata.TWO52  0x08007248       0x10 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_rint.o)
+                0x08007258                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x08007250        0x8
-                0x08007250                __exidx_start = .
+.ARM            0x08007258        0x8
+                0x08007258                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08007250        0x8 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp\libgcc.a(_udivmoddi4.o)
-                0x08007258                __exidx_end = .
+ .ARM.exidx     0x08007258        0x8 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp\libgcc.a(_udivmoddi4.o)
+                0x08007260                __exidx_end = .
 
-.rel.dyn        0x08007258        0x0
- .rel.iplt      0x08007258        0x0 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+.rel.dyn        0x08007260        0x0
+ .rel.iplt      0x08007260        0x0 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.preinit_array  0x08007258        0x0
-                0x08007258                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08007260        0x0
+                0x08007260                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08007258                PROVIDE (__preinit_array_end = .)
+                0x08007260                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x08007258        0x8
-                0x08007258                PROVIDE (__init_array_start = .)
+.init_array     0x08007260        0x8
+                0x08007260                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x08007258        0x4 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(lib_a-__call_atexit.o)
+                0x08007260        0x4 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x0800725c        0x4 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
-                0x08007260                PROVIDE (__init_array_end = .)
+ .init_array    0x08007264        0x4 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+                0x08007268                PROVIDE (__init_array_end = .)
 
-.fini_array     0x08007260        0x4
-                0x08007260                PROVIDE (__fini_array_start = .)
+.fini_array     0x08007268        0x4
+                0x08007268                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08007260        0x4 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
-                0x08007264                PROVIDE (__fini_array_end = .)
-                0x08007264                _sidata = LOADADDR (.data)
+ .fini_array    0x08007268        0x4 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
+                0x0800726c                PROVIDE (__fini_array_end = .)
+                0x0800726c                _sidata = LOADADDR (.data)
 
-.data           0x20000000      0x49c load address 0x08007264
+.data           0x20000000      0x49c load address 0x0800726c
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -2221,11 +2221,11 @@ LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nof
                 0x2000049c                . = ALIGN (0x4)
                 0x2000049c                _edata = .
 
-.igot.plt       0x2000049c        0x0 load address 0x08007700
+.igot.plt       0x2000049c        0x0 load address 0x08007708
  .igot.plt      0x2000049c        0x0 e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crtbegin.o
                 0x2000049c                . = ALIGN (0x4)
 
-.bss            0x200004a0      0x84c load address 0x08007700
+.bss            0x200004a0      0x84c load address 0x08007708
                 0x200004a0                _sbss = .
                 0x200004a0                __bss_start__ = _sbss
  *(.bss)
@@ -2285,7 +2285,7 @@ LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nof
                 0x20000cec                _ebss = .
                 0x20000cec                __bss_end__ = _ebss
 
-.heap           0x20000cec        0x0 load address 0x08007700
+.heap           0x20000cec        0x0 load address 0x08007708
                 0x20000cec                . = ALIGN (0x4)
                 0x20000cec                _heap_bottom = .
                 0x20000cec                end = _heap_bottom
@@ -2294,7 +2294,7 @@ LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nof
                 0x20000cec                . = (. + _HEAP_SIZE)
                 0x20000cec                _heap_top = .
 
-.stack          0x20000cec     0x1000 load address 0x08007700
+.stack          0x20000cec     0x1000 load address 0x08007708
                 0x20000cec                . = ALIGN (0x4)
                 0x20000cec                _stack_bottom = .
                 0x20001cec                . = (. + _STACK_SIZE)
@@ -2435,7 +2435,7 @@ LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm
 LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a
 LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp\libgcc.a
 
-.debug_line     0x00000000     0xb552
+.debug_line     0x00000000     0xb551
  .debug_line    0x00000000       0x70 ./objects/startup_cm4.o
  .debug_line    0x00000070      0x22a ./objects/system_cm4.o
  .debug_line    0x0000029a     0x10a7 ./objects/printf-stdarg.o
@@ -2467,7 +2467,7 @@ LOAD e:/software/gcc_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nof
  .debug_line    0x0000a159      0x805 ./objects/lora_flash.o
  .debug_line    0x0000a95e      0x3d4 ./objects/lora_function.o
  .debug_line    0x0000ad32      0x380 ./objects/lora_user.o
- .debug_line    0x0000b0b2      0x4a0 ./objects/ymodem.o
+ .debug_line    0x0000b0b2      0x49f ./objects/ymodem.o
 
 .debug_info     0x00000000    0x17702
  .debug_info    0x00000000       0x22 ./objects/startup_cm4.o

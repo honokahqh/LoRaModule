@@ -11,8 +11,13 @@ SF,BW,CR,FRQ为LoRa通讯参数,不一致则无法通讯。PanID,SAddr为网络参数
 ## FLASH分区
 
 0x08000000-0x0801FFFF为ASR6601CB的Flash范围，0x08003FFFF为ASR6601SE的Flash范围，每4KB为一页
+fac,            boot,       0xD000
+flashdata,      data,       0x3000
+app,            app,        0x10000
 该固件设置固件大小为(128/2 - 12) = 52KB,三页分别用于存储网络信息-子设备信息-固件OTA信息
-BOOT可视为FAC固件，不会被擦除
+编译fac时,选择option->linker->linker script file-edit gcc.ld,设置FLASH(rx):ORIGIN = 0x08000000, LENGTH = 128K,打开lora_core.h,#define Lora_Is_APP 0
+编译app时,选择option->linker->linker script file-edit gcc.ld,设置FLASH(rx):ORIGIN = 0x08010000, LENGTH = 128K,打开lora_core.h,#define Lora_Is_APP 1
+均编译并烧录后即可正常运行
 
 ### OTA
 

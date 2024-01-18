@@ -10,9 +10,9 @@
 #define FLASH_START_ADDR            0x08000000
 #define FLASH_MAX_SIZE              0x20000 //128KB
 
-#define FlashData1_ADDR              0x0800C000
-#define FlashData2_ADDR              0x0800D000 
-#define OTA_ADDR                     0x0800E000
+#define FlashData1_ADDR              0x0800D000
+#define FlashData2_ADDR              0x0800E000 
+#define OTA_ADDR                     0x0800F000
 
 #define APP_ADDR                     0x08010000
 #define Boot_ADDR                    0x08000000

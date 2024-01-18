@@ -119,6 +119,11 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>DLGUARM</Key>
+          <Name>d</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>ARMRTXEVENTFLAGS</Key>
           <Name>-L70 -Z18 -C0 -M0 -T1</Name>
         </SetRegEntry>
@@ -149,14 +154,14 @@
           <Type>0</Type>
           <LineNumber>101</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134240242</Address>
+          <Address>134240210</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>E:\work\LoRa Module\RoomLight\RoomLight\src\user\lora_profile\lora_core.c</Filename>
+          <Filename>E:\work\LoRa Module\LoRaModule\LoRaModule\src\user\lora_profile\lora_core.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\project\src/user/lora_profile/lora_core.c\101</Expression>
         </Bp>

@@ -197,19 +197,6 @@ int ymodem_packet_analysis(uint8_t *rxbuffer, uint16_t rxlen, uint8_t *txbuffer,
             *txlen = 2;
             ymodem_session.state = YMODEM_STATE_END;
             break;
-        // case YMODEM_STATE_EOT2:			
-        //     if(rxbuffer[0] != EOT)
-        //     {
-        //         txbuffer[0] = NAK;
-        //         *txlen = 1;
-        //         ymodem_session.error_count++;
-        //         return -1;
-        //     }
-        //     txbuffer[0] = ACK;
-        //     txbuffer[1] = YMODEM_CRC;
-        //     *txlen = 2;
-        //     ymodem_session.state = YMODEM_STATE_END;
-        //     break;
         case YMODEM_STATE_END:  
             if (rxbuffer[0] != 0x01 || rxbuffer[1] != 0x00 || rxbuffer[2] != 0xFF)
             {
