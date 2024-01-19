@@ -40,7 +40,7 @@ void CusProfile_Send(uint16_t DAddr, uint8_t cmd, uint8_t *data, uint8_t len, ui
     LoRaPacket.Tx_Len = len + Data_Addr + 1;
     LOG_I(TAG, "DAddr:%04x, CMD:%02x data:", DAddr, cmd);
 #if LOG_LEVEL >= LOG_INFO
-    for(uint8_t i = 0; i < LoRaPacket.Tx_Len; i++)
+    for (uint8_t i = 0; i < LoRaPacket.Tx_Len; i++)
     {
         printf("%02X ", LoRaPacket.Tx_Data[i]);
     }
@@ -83,8 +83,9 @@ void CusProfile_Receive()
     {
         return;
     }
-    if (Compare_ShortAddr(LoRaPacket.Rx_SAddr) == 0xFF && LoRaPacket.Rx_SAddr != RegisterDevice.device.shortAddress)
-    { // 短地址验证,在设备列表内/注册列表内
+    if (Compare_ShortAddr(LoRaPacket.Rx_SAddr) == 0xFF && LoRaPacket.Rx_SAddr != RegisterDevice.device.shortAddress &&
+        LoRaPacket.Rx_SAddr != LoRaDevice.Master.shortAddress && LoRaDevice.NetMode == 0) // 非组网模式下,过滤非本机注册的设备
+    { 
         return;
     }
 
@@ -114,6 +115,9 @@ DataProcess:
         break;
     case HeartBeat:
         Cmd_HeartBeat();
+        break;
+    case Query_Rssi:
+        Cmd_Query_Rssi();
         break;
     default:
         User_Slaver_Cmd();
@@ -159,8 +163,10 @@ void LoRa_NetCheck()
                 case SlaverInNet: // 入网失败
                     memset(&LoRaDevice.Master, 0, sizeof(LoRa_Node_t));
                     LoRaDevice.Self.shortAddress = LoRaBackup.SAddr;
-                    LoRaDevice.PanID = LoRaBackup.PanID;
+                    LoRaDevice.PanID = BoardCast; // 仍在请求入网
                     LoRaDevice.Net_State = Net_NotJoin;
+                    LoRaPacket.Wait_ACK = 0;
+                    LoRaPacket.ErrTimes = 0;
                     break;
                 default:
                     LoRaPacket.Wait_ACK = 0;

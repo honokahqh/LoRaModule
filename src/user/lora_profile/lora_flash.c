@@ -12,8 +12,10 @@ void LoRa_NetPara_Save(uint8_t type)
     if (page1_offset >= 500)
     {
         page1_offset = 0;
+        LOG_I(TAG, "NetPara erase\r\n");
         flash_erase_page(FlashData1_ADDR);
         LoRa_NetPara_Save(Type_Lora_net);
+        return;
     }
     switch (type)
     {
@@ -38,6 +40,7 @@ void LoRa_NetPara_Save(uint8_t type)
     default:
         break;
     }
+    LOG_I(TAG, "NetPara Save, page release %d\r\n", 500 - page1_offset);
 }
 
 void LoRaNetParaSyn()
@@ -106,6 +109,7 @@ void LoRaAddSlaver(uint8_t ID)
     if (page2_offset >= 500)
     {
         page2_offset = 0;
+        LOG_I(TAG, "Slaver erase\r\n");
         flash_erase_page(FlashData2_ADDR);
         for (uint8_t i = 0; i < MAX_CHILDREN; i++)
         {
@@ -124,6 +128,7 @@ void LoRaAddSlaver(uint8_t ID)
     flash_program_bytes(FlashData2_ADDR + page2_offset * 8, temp_data, ((Type_Lora_Slaver_len + 7) / 8) * 8);
     page2_offset += (Type_Lora_Slaver_len + 7) / 8;
     LOG_I(TAG, "AddSlaver:%d, SAddr:%d \r\n", ID, LoRaDevice.Slaver[ID].shortAddress);
+    LOG_I(TAG, "page release %d\r\n", 500 - page2_offset);
 }
 
 /**
@@ -142,6 +147,7 @@ void LoRaDelSlaver(uint8_t ID)
     if (page2_offset >= 500)
     {
         page2_offset = 0;
+        LOG_I(TAG, "Slaver erase\r\n");
         flash_erase_page(FlashData2_ADDR);
         for (uint8_t i = 0; i < MAX_CHILDREN; i++)
         {
@@ -156,6 +162,8 @@ void LoRaDelSlaver(uint8_t ID)
     temp_data[1] = ID;
     flash_program_bytes(FlashData2_ADDR + page2_offset * 8, temp_data, ((Type_Lora_Slaver_len + 7) / 8) * 8);
     page2_offset += (Type_Lora_Slaver_len + 7) / 8;
+    LOG_I(TAG, "DelSlaver:%d, SAddr:%d \r\n", ID, LoRaDevice.Slaver[ID].shortAddress);
+    LOG_I(TAG, "page release %d\r\n", 500 - page2_offset);
 }
 
 /**

@@ -25,13 +25,15 @@ app,            app,        0x10000
 
 ## 如何使用例程
 
+关于组网
+
 主机流程如下：
 
-AT+FACTORY ---> (可选：AT+SF/AT+BW配置通讯参数，AT+PANID配置网络参数) ---> AT+NETOPEN1
+串口发送AT+FACTORY ---> (可选：AT+SF/AT+BW配置通讯参数，AT+PANID配置网络参数) ---> AT+NETOPEN1
 
 从机流程如下：
 
-AT+FACTORY ---> AT+NETOPEN2
+串口发送AT+FACTORY ---> AT+NETOPEN2
 
 组网打印如下(主机)
 
@@ -44,6 +46,7 @@ I (99) flashData: SpreadingFactor:7, BandWidth:0
 I (707) main: app start
 I (707) LoRa core: DAddr:fffe, CMD:01 data:7B FF FE 00 00 FF FE 00 01 08 A7 D7 1A 00 C3 02 32 01 EA 
 I (3772) LoRa core: DAddr:fffe, CMD:01 data:7B FF FE 00 00 FF FE 01 01 08 A7 D7 1A 00 C3 02 32 01 EB 
+
 发→◇AT+NETOPEN1
 I (140177) LoRaAtCmd: NetMode:1
 I (140177) flashData: NetState:0, NetMode:1, NetModeTimeout:0 
@@ -61,6 +64,7 @@ I (188628) flashData: AddSlaver:0, SAddr:1436
 
 - 此时设备组网完毕，主机可以选择继续绑定设备，也可以选择使用命令AT+NETOPEN0回到工作信道
 
+发→◇AT+NETOPEN0
 I (261629) LoRaAtCmd: NetMode:0
 I (261629) flashData: NetState:0, NetMode:0, NetModeTimeout:0 
 I (261630) flashData: channel:0, PanID:0290 SelfAddr:0000, MasterAddr:0000 
@@ -68,6 +72,7 @@ I (261631) flashData: SpreadingFactor:7, BandWidth:0
 I (261631) flashData: SynSlaver:0, SA:1436 
 I (307325) LoRa function: receive packet from PanID:0290, SAddr:059C, DAddr:0000, CMD:20, data:7B 02 90 05 9C 00 00 03 20 04 7B 0C 00 FF DF 
 I (307326) LoRaCmd_Master: HeartBeat, device saddr:059c, verion:12, rssi:255
+
 发→◇55 AA 80 05 9C 01 # 16进制发送
 I (312945) LoRa core: DAddr:059c, CMD:80 data:7B 02 90 00 00 05 9C 03 80 01 01 F3 
 I (313065) LoRa function: receive packet from PanID:0290, SAddr:059C, DAddr:0000, CMD:81, data:7B 02 90 05 9C 00 00 03 81 02 FF C5 CA 

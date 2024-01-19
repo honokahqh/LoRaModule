@@ -175,7 +175,6 @@ void handleDelet(int parameter)
     }
     LOG_I(TAG, "Delet:%d\r\n", parameter);
     PCmd_Master_Request_Leave(parameter);
-    LoRaDelSlaver(parameter);
     memset(&LoRaDevice.Slaver[parameter], 0, sizeof(LoRa_Node_t));
 }
 

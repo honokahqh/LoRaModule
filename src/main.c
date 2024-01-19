@@ -23,7 +23,7 @@ int main(void)
     Lora_StateInit();                            // 状态初始	化
     delay_ms(((LoRaDevice.chip_ID) % 10) * 100); // 随机延迟
     lora_init();                                 // lora初始化
-    wdg_reload();                                // 看门狗喂狗
+//    wdg_reload();                                // 看门狗喂狗
     IAP_Detect();                                // 检测是否需要升级
     State_Updata();                              // 上报版本号
     LOG_I(TAG, "app start\r\n");
